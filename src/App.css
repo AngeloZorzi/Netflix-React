@@ -83,3 +83,66 @@ body {
 .carousel-indicators {
   display: none;
 }
+.film-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.image-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.film-card:hover .overlay {
+  opacity: 1;
+}
+
+.film-card:hover .img {
+  filter: blur(5px);
+}
+
+.play-button {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 3; /* Assicura che le frecce siano sopra tutto */
+  width: 5%; /* Riduce l'area cliccabile */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  pointer-events: auto; /* Permette il click SOLO sulla freccia */
+}

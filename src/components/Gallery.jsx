@@ -8,6 +8,7 @@ import {
   Spinner,
   Alert,
 } from "react-bootstrap";
+import { PlayFill } from "react-bootstrap-icons";
 
 class FilmGallery extends Component {
   state = {
@@ -99,13 +100,20 @@ class FilmGallery extends Component {
                       lg={2}
                       className="flex-shrink-0"
                     >
-                      <Card className="bg-black border-0 text-white">
-                        <Card.Img
-                          variant="top"
-                          src={item.Poster}
-                          alt={item.Title}
-                          className="img"
-                        />
+                      <Card className="bg-black border border-1 border-dark text-white film-card">
+                        <div className="image-container">
+                          <Card.Img
+                            variant="top"
+                            src={item.Poster}
+                            alt={item.Title}
+                            className="img"
+                          />
+                          <div className="overlay">
+                            <button className="play-button">
+                              <PlayFill size={30} />
+                            </button>
+                          </div>
+                        </div>
                         <Card.Body className="p-2">
                           <Card.Title className="card-title">
                             {item.Title}
