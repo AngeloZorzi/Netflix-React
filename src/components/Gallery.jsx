@@ -71,6 +71,14 @@ class FilmGallery extends Component {
               className="d-flex justify-content-center align-items-center"
               style={{ height: "100vh" }}
             >
+              <img
+                src="../netflix_logo.png"
+                alt="Netflix Logo"
+                style={{
+                  width: "150px",
+                  height: "auto",
+                }}
+              />
               <Spinner animation="border" variant="danger" />
             </div>
           </Container>
