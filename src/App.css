@@ -2,6 +2,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #141414;
 }
 
 .wrapper {
@@ -10,10 +11,14 @@ body {
 }
 
 .title {
-  color: #dc3545;
+  color: #e50914;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+
+  letter-spacing: 2px;
+
+  text-shadow: 2px 2px 4px rgba(31, 31, 31, 0.5);
 }
 
 .scroll {
@@ -138,11 +143,11 @@ body {
 }
 .carousel-control-prev,
 .carousel-control-next {
-  z-index: 3; /* Assicura che le frecce siano sopra tutto */
-  width: 5%; /* Riduce l'area cliccabile */
+  z-index: 3;
+  width: 5%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  pointer-events: auto; /* Permette il click SOLO sulla freccia */
+  pointer-events: auto;
 }
