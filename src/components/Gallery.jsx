@@ -1,9 +1,19 @@
 import React, { Component } from "react";
-import { Card, Col, Row, Carousel, Container } from "react-bootstrap";
+import {
+  Card,
+  Col,
+  Row,
+  Carousel,
+  Container,
+  Spinner,
+  Alert,
+} from "react-bootstrap";
 
 class FilmGallery extends Component {
   state = {
     media: [],
+    loading: true,
+    error: null,
   };
 
   componentDidMount() {
@@ -23,23 +33,50 @@ class FilmGallery extends Component {
       })
       .then((data) => {
         if (data.Response === "True" && Array.isArray(data.Search)) {
-          this.setState({ media: data.Search });
+          this.setState({ media: data.Search, loading: false });
         } else {
           throw new Error("ERRORE!!!");
         }
       })
       .catch((error) => {
         console.error("Errore nel recupero dei dati:", error);
+        this.setState({ loading: false, error: error.message });
       });
   }
 
   render() {
-    const { media } = this.state;
+    const { media, loading, error } = this.state;
     const { title } = this.props;
 
-    if (!media || media.length === 0) {
-      return <div>Loading...</div>;
+    if (error) {
+      return (
+        <div className="wrapper">
+          <Container fluid>
+            <h3 className="title">{title}</h3>
+            <Alert variant="danger">
+              <Alert.Heading>Mannaggia...</Alert.Heading>
+              <p>{error}</p>
+            </Alert>
+          </Container>
+        </div>
+      );
     }
+    if (loading) {
+      return (
+        <div className="wrapper">
+          <Container fluid>
+            <h3 className="title">{title}</h3>
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{ height: "100vh" }}
+            >
+              <Spinner animation="border" variant="danger" />
+            </div>
+          </Container>
+        </div>
+      );
+    }
+
     const chunkedMedia = [];
     for (let i = 0; i < media.length; i += 6) {
       chunkedMedia.push(media.slice(i, i + 6));

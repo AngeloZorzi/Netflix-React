@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import CustomNavbar from "./components/Navbar";
 import FilmGallery from "./components/Gallery";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <>
@@ -14,7 +16,7 @@ function App() {
         <FilmGallery title="SAW SAGA" film="Saw" />
         <FilmGallery title="LORD OF THE RINGS" film="Lord Of The Rings" />
       </main>
-      <footer></footer>
+      <Footer />
     </>
   );
 }

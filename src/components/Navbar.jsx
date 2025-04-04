@@ -7,7 +7,13 @@ const CustomNavbar = () => {
   return (
     <Navbar expand="lg" bg="dark" variant="dark">
       <Container fluid>
-        <Navbar.Brand href="#">Netflix</Navbar.Brand>
+        <Navbar.Brand href="#">
+          <img
+            src="../netflix_logo.png"
+            alt="Netflix Logo"
+            style={{ width: "120px", height: "auto" }} // Imposta la larghezza fissa
+          />
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarNav" />
         <Navbar.Collapse id="navbarNav">
           <Nav className="me-auto">
@@ -24,7 +30,7 @@ const CustomNavbar = () => {
               <i className="bi bi-search"></i>
             </Nav.Link>
             <Nav.Link href="#" className="text-white me-3">
-              Kids
+              Angelo
             </Nav.Link>
             <Nav.Link href="#" className="text-white me-3">
               <i className="bi bi-bell"></i>
@@ -35,7 +41,15 @@ const CustomNavbar = () => {
                 variant="dark"
                 className="p-0 border-0"
               >
-                Avatar
+                <img
+                  src="../images.jpg"
+                  alt="Avatar"
+                  style={{
+                    width: "30px",
+                    height: "30px",
+                  }}
+                  className="rounded-circle"
+                />
               </Dropdown.Toggle>
               <Dropdown.Menu variant="dark">
                 {["Profilo", "Impostazioni", "Esci"].map((item, index) => (

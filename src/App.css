@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 .wrapper {
   background-color: black;
   padding: 1rem;
@@ -43,4 +49,37 @@
 .card-text {
   color: #adb5bd;
   font-size: 0.75rem;
+}
+
+.bg-netflix-2 {
+  background-color: #141414; /* Nero Netflix */
+}
+
+.text-netflix-1 {
+  color: #ffffff; /* Colore del testo */
+}
+
+.text-netflix-4 {
+  color: #b3b3b3; /* Colore grigio chiaro per i link */
+}
+
+.btn-outline-netflix-4 {
+  border-color: #b3b3b3;
+  color: #b3b3b3;
+}
+
+.btn-outline-netflix-4:hover {
+  background-color: #b3b3b3;
+  color: #141414;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.carousel-indicators {
+  display: none;
 }
