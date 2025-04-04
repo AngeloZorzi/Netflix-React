@@ -1,0 +1,46 @@
+.wrapper {
+  background-color: black;
+  padding: 1rem;
+}
+
+.title {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.scroll {
+  display: flex;
+
+  gap: 1rem;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.item {
+  flex-shrink: 0;
+  width: 160px;
+}
+
+.img {
+  border-radius: 4px;
+  height: 240px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  color: #adb5bd;
+  font-size: 0.75rem;
+}
