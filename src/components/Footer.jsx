@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
-import "bootstrap-icons/font/bootstrap-icons.css"; // Importa le icone Bootstrap
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const Footer = () => {
   return (

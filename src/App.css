@@ -20,11 +20,11 @@ body {
   display: flex;
 
   gap: 1rem;
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 .scroll::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none;
 }
 
 .item {
@@ -52,15 +52,15 @@ body {
 }
 
 .bg-netflix-2 {
-  background-color: #141414; /* Nero Netflix */
+  background-color: #141414;
 }
 
 .text-netflix-1 {
-  color: #ffffff; /* Colore del testo */
+  color: #ffffff;
 }
 
 .text-netflix-4 {
-  color: #b3b3b3; /* Colore grigio chiaro per i link */
+  color: #b3b3b3;
 }
 
 .btn-outline-netflix-4 {

@@ -15,6 +15,8 @@ function App() {
         <FilmGallery title="STARWARS SAGA" film="Star Wars" />
         <FilmGallery title="SAW SAGA" film="Saw" />
         <FilmGallery title="LORD OF THE RINGS" film="Lord Of The Rings" />
+        <FilmGallery title="MARVEL MULTIVERSE" film="Marvel" />
+        <FilmGallery title="ANIME" film="Anime" />
       </main>
       <Footer />
     </>

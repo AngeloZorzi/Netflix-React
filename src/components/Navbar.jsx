@@ -11,7 +11,7 @@ const CustomNavbar = () => {
           <img
             src="../netflix_logo.png"
             alt="Netflix Logo"
-            style={{ width: "120px", height: "auto" }} // Imposta la larghezza fissa
+            style={{ width: "120px", height: "auto" }}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarNav" />
